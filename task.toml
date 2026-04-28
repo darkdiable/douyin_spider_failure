@@ -1,0 +1,26 @@
+[task]
+version = "1.1"
+name = "抖音爬虫环境故障修复"
+description = "一个多层级、高隐蔽性的Python环境故障诊断与修复任务，考察深度系统问题排查能力"
+
+[agent]
+timeout_sec = 1800
+command = ["/bin/bash", "-c", "cd /app/solution && chmod +x solve.sh && ./solve.sh"]
+
+[environment]
+timeout_sec = 300
+allow_internet = true
+ports = [9999]
+
+[verifier]
+timeout_sec = 1800
+command = ["/bin/bash", "-c", "cd /app/tests && chmod +x test.sh && ./test.sh"]
+
+[metadata]
+difficulty = "hard"
+category = "mixed"
+domain = "系统运维"
+subdomain = "故障排查"
+tags = ["network", "python", "scrapy", "configuration", "debugging", "linux", "ld_preload", "code_injection"]
+skills = ["Linux系统诊断", "Python环境排查", "网络故障定位", "依赖问题修复", "代码审计", "系统级故障分析"]
+scenarios = ["容器化环境运维", "线上故障紧急修复", "依赖冲突解决", "恶意代码排查"]
